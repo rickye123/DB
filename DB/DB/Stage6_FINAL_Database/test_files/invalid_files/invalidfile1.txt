@@ -1,0 +1,4 @@
+id animal 
+1 Tiger
+2 Bear
+3 Koala

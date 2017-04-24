@@ -1,0 +1,45 @@
+In this stage, the Record class was adapated so that records could only be stored
+as variable length array lists. This was so that the user isn't bound by the 
+number of Strings (records) they could enter, allowing tables to be of a varied size. 
+
+A new class was added, Table.java, which would be respinsible for collating a 
+collection of records. In a table, all records must have the same number of fields.
+
+The methods for Table.java include: createTable, getTable, numberColumns, deleteRecord,
+replaceRow, moveRowsUp, selectRecord, invalidRow, checkRowOOB, updateTabe, outOfBounds,
+insertIntoTable, checkRecordLength, displaySelectedRecord, findTableSize, displayTable, 
+and increment rows. 
+
+Unit tests were performed on the few methods returning values. Void functions were tested
+using integration tests (units grouped together to see if they return a desired outcome). 
+
+A table is stored as a 2D array list of Strings. This way, when a record is added to 
+a table, a new ArrayList can simply be added to the table and then filled with the 
+elements of the record. 
+
+The createTable method simply took a variable number of Strings from the user and 
+created a table with the desired headings. The number of Strings was then added together
+to compute the number of columns, so as to check whether a record had the same number 
+of columns as the header.
+
+The deleteRecord method checked to see if the row entered was valid and then proceeded
+to delete the record from the table using clear(). NOTE: it was later found out that 
+remove() is a much better function, but was not discovered until a later stage of 
+development. As clear() simply removes the elements within the array list and not the 
+arraylist itself, this meant that there was a row in the table containing null values. 
+Thus, replaceRow and moveRowsUp was created to replace the null value row (although
+this just put the null row at the bottom of the table). For now, this was acceptable, 
+but for tables with a much larger size this could be an issue (as complexity is Big-O(n)).
+
+The selectRecord method simply returned an arraylist of strings if the row selected
+was valid. This was printed using the displaySelectRecord method. 
+
+Other relevant functions manipulated the private fields wrapped by the class, such as 
+the number of rows and the number of columns. For instance, when a new record
+was inserted using insertIntoTable, the incrementRows method would be called which
+would increase the number of rows by 1, so that when another record is added the 
+program knows whereabouts in the arraylist it is being added. 
+
+This stage was a much bigger step than the previous one, but the program was still 
+not entirely clear at this point. Thus, a lot of these methods were adapted and changed
+at later stages of development. 

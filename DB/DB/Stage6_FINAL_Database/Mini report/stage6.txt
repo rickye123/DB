@@ -1,0 +1,22 @@
+This was the final stage of development. In the previous stage, the database class
+was removed to allow each class to work independently of any control. Now, the 
+Database class is used to wrap everything up from the previous classes. 
+
+This class allows for multiple tables to be stored in a database that the user can
+create. As an extension, a database folder could be created and the tables written 
+to files inside that folder. This was something touched upon in the extension task. 
+
+Meanwhile, this class contains an arraylist of tables called database which can 
+be manipualted in a similar way to the table arraylist in Table.java. These tables
+can have records selected, updated, or created, as well as completely removed. 
+
+This stage of development involved taking all the concepts from the prior phases and 
+linking them together to make a general purpose database. 
+
+All the unit testing was finished at this stage of development and again proved to 
+be a useful way to debug the program. Many issues arose when trying to reference
+a position of a table in the List<Table> database arraylist. Many functions worked
+without any errors, and it wasn't until unit testing that many bugs were discovered. 
+IndexOutOfBoundsExceptions were thrown for the methods referencing a positioin in the 
+table, meaning this had to be changed to reference the number of tables in the 
+arraylist. 

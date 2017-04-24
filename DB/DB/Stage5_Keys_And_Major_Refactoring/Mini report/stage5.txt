@@ -1,0 +1,26 @@
+The transition between stages 4 and 5 is possibly the largest between phases of 
+development. Notably, the Table class was updated to allow for table names to be 
+added (using a constructor). This was optional, however, taking a variable length
+of String arguments so that it wasn't necessary to include the table name when 
+creating a table object. The table name is given the identifier "untitled" if 
+the table object takes no parameters. 
+
+Furthermore, the moveRowsUp and replaceRow methods were removed as the .remove() 
+method proved to be a more effective way of completely removing records. Moreover, 
+most of the tables were edited to return boolean values to make testing slightly 
+easier. 
+
+In addition, keys was an important element of this phase of development. The Key 
+class was created which searches a table to see if fields in the key column have
+duplicates. If there are duplicates in the key column, a boolean value is returned. 
+
+Moreover, the Print class was created to handle printing to the terminal in a 
+clean and precise way. When a table is printed, it is first formatted. This is
+where the max field length of each column is calculated and returned into an array
+of integers called maxFieldLengths. This allows the table to be of a varied size 
+depending on the length of the fields in each column. 
+
+All these changes meant that a lot of the unit tests had to be redone for most of 
+the classes. This was a useful way of finding bugs in the program, however, as many
+problems were found and solved by unit testing the functions in the Table.java 
+class. 

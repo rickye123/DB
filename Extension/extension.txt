@@ -1,0 +1,30 @@
+Java Assignment 1 - Oxo Extension
+
+For the extension task, I decided to create an AI to allow the user to play 
+against the computer. However, rather than creating an AI which makes the 
+game potentially "unwinnable", e.g. the minimax algorithm, I have decided to 
+create characteristics for the computer that makes its moves less intelligent, 
+but not idiotic. 
+
+An AI for a Noughts and Crosses game should follow these rules: 
+1. If the game can be won by a move, take it; 
+2. Otherwise, if the user can win from the next move, block that move. 
+
+Therefore, this AI implements these two mechanisms, first checking to see
+if the game is winnable, then if this is false attempting to block the user
+from winning. If neither possibility is true, the AI selects a position on 
+the board by random.
+
+The user can also determine who goes first, them or the computer, by simply
+typing "User" or "Computer" into the terminal when prompted. These are 
+safeguarded and will display an error if input is incorrect. 
+
+In addition, as this expands on the first Oxo game, the user has the choice to
+either play against the computer or play two player. 
+
+To Run:
+Entering "make run" into the terminal should run the game. If this fails, 
+entering java Oxo should suffice. For testing, "java -ea Oxo" needs to be used. 
+For compiling, simply entering "make" should work. If this fails, just need 
+to enter "javac Oxo.java Board.java Display.java Symbols.java Positon.java
+AI.java Testing.java". 

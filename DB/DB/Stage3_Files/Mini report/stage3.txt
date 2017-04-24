@@ -1,0 +1,11 @@
+In this stage, the Upload.java class was added to handle input and output from 
+files. A readFromFile method was created which would accept a file name and 
+a Table class. 
+
+Only readable text files are permitted, meaning that they must adhere to a 
+certain format, i.e. contain fields separated by a semi-colon (':') character. 
+
+In the Table class, a readFromFile method was created which allowed text files to 
+be read into tables. This was one of the shortest stages of development that only
+included reading in text files and nothing else. These methods would be completely
+changed in further stages of development. 

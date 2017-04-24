@@ -1,0 +1,12 @@
+In the fourth stage of development, the Upload class was updated, allowing for tables
+to be written to text files. This stage and the prior stage were split up due to 
+problems that arose when deciding the format of the files. Moreover, problems arose
+when writing to files as a newline character has to be written so that when the
+file was read back in, the readFromFile function knows where a record ends. 
+
+The Database class is still used as a control class at this point (though it will 
+change in the next phase of development). 
+
+Minimal testing was done at this stage bar some debugging on the readFromFile and 
+writeToFile functions. Otherwise, the Record.java and Table.java classes stayed
+more or less the same. 

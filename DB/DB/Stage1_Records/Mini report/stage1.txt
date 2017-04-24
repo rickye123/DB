@@ -1,0 +1,18 @@
+At stage 1, the program invovled two classes: Record.java and Database.java. 
+Record.java showcased the main stage of development, whereas Database.java
+was used as a control class to see what was working. 
+
+At this stage, it was unclear whether to store records as fixed sized String 
+arrays or as variable length array lists. As a result, both were created and 
+the one which would be used would be decided later based on the further stages 
+of development. 
+
+Record.java has only a few methods at this stage: setRecord, getRecord, 
+displayRecord, findStrArrayLength. These methods allowed the user to: 
+enter a variable length of arguments to set the record; obtain a record;
+display the record to the terminal; and find the length (number of strings)
+in the record, respectively. 
+
+Testing at this stage was minimal and included a few assertions. As it was unclear
+the direction this program was going, it was best to keep this stage minimal
+until a more thorough understanding was reached. 
